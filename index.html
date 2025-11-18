@@ -116,6 +116,11 @@
               >
             </li>
             <li>
+              <a href="#practices" class="hover:text-blue-600 hover:underline"
+                >Практики участников</a
+              >
+            </li>
+            <li>
               <a href="#resources" class="hover:text-blue-600 hover:underline"
                 >Ресурсы</a
               >
@@ -137,17 +142,18 @@
           <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
             <div class="video-container">
               <iframe
-                src="https://vkvideo.ru/video_ext.php?oid=-231468147&id=456239045&hd=2&hash=a53778d827bab9b0&autoplay=1"
+              src="https://rutube.ru/play/embed/fd96546299ac747ea3a581032fcd8060/?p=SJYfuDsHrTLxxnen3vVPxQ"
                 style="background-color: #000"
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
                 frameborder="0"
                 allowfullscreen
               >
               </iframe>
+
             </div>
             <div class="p-6">
               <p class="mb-6 text-lg">
-                С 15 по 18 ноября 2025 года в Пятигорске состоялся итоговый
+                С 15 по 18 ноября 2025 года в Пятигорске состоялся первый
                 выпуск авторской образовательной программы «Директор на высоте»,
                 реализуемой Центром знаний «Машук». Мероприятие объединило
                 руководителей школ из разных регионов России для практической
@@ -330,6 +336,20 @@
                   <p class="mb-3 text-blue-600" itemprop="description"></p>
 
                   <div class="mt-4 space-y-2">
+                    <!-- Тезисы выступления -->
+                    <div
+                      class="p-3 border rounded-lg hover:bg-green-50 transition duration-200 cursor-pointer"
+                      onclick="openThesisPage(this.dataset.url)"
+                    >
+                      <div class="flex items-center">
+                        <i
+                          class="fas fa-file-alt text-green-500 text-2xl mr-3"
+                        ></i>
+                        <div>
+                          <h4 class="font-bold">Тезисы выступления</h4>
+                        </div>
+                      </div>
+                    </div>
                     <!-- Конспект -->
                     <div
                       class="p-3 border rounded-lg hover:bg-blue-50 transition duration-200 cursor-pointer"
@@ -358,6 +378,20 @@
                         </div>
                       </div>
                     </div>
+                    <!-- Презентация 2 (будет добавлена только если есть ссылка) -->
+                    <div
+                      class="p-3 border rounded-lg hover:bg-orange-50 transition duration-200 cursor-pointer"
+                      onclick="openLink(this.dataset.url)"
+                    >
+                      <div class="flex items-center">
+                        <i
+                          class="fas fa-file-powerpoint text-orange-500 text-2xl mr-3"
+                        ></i>
+                        <div>
+                          <h4 class="font-bold">Презентация 2</h4>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -371,17 +405,19 @@
               image: "img/1.jpg",
               name: "Проекты",
               position: "Разработки участников",
-              topic: "5 ключей мотивации: как вести за собой школьную команду",
+              topic: "Оптимизация образовательных процессов и повышение мотивации педагогов",
               tags: ["Мотив", "Команда"],
-              presentationUrl:
-              "https://disk.yandex.ru/d/Uee0q2yDX8l-NA"            },
+              presentationUrl: "https://disk.yandex.ru/d/Uee0q2yDX8l-NA",
+              thesisUrl: "speakers/projects.html",
+            },
             {
               image: "img/2.jpg",
               name: "Митрополит Евгений",
               topic: "Воспитание и духовность в современной школе",
               tags: ["Вера", "Духовность"],
-              presentationUrl:
-                "https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FSA8myMBzPzwVq6L%2BMctxxKLr3ktgsBqRZcb4xMlkruM%2FI0bf2UiDmQdFSXJTyq90q%2FJ6bpmRyOJonT3VoXnDag%3D%3D%3A%2FФедоров%20М.В._Искусственный_интеллект%3A%20этика_и_актуальные_вопросы.pdf&name=Федоров%20М.В._Искусственный_интеллект%3A%20этика_и_актуальные_вопросы.pdf&nosw=1",
+              presentationUrl: "https://disk.yandex.ru/d/QN6AqCt0Bvl1hQ",
+              presentationUrl2: "https://disk.yandex.ru/i/ns3oYTK7lrLNpA",
+              thesisUrl: "speakers/mitropolit.html",
             },
             {
               image: "img/3.jpg",
@@ -389,8 +425,9 @@
               position: "Руководитель Мастерской новых медиа",
               topic: "Основы киберсоциализации и социальной инженерии",
               tags: ["Информация", "Медиа"],
-              presentationUrl:
-"https://disk.yandex.ru/d/mrdbUQPpZEKk7g"            },
+              presentationUrl: "https://disk.yandex.ru/d/mrdbUQPpZEKk7g",
+              thesisUrl: "speakers/kanavtsev.html",
+            },
             {
               image: "img/4.jpg",
               name: "Антон Сериков",
@@ -398,8 +435,17 @@
                 "Генерального директора Центра знаний «Машук», заместителя генерального директора Российского общества «Знание»",
               topic: "Размышления о наставничестве",
               tags: ["Наставничество", "Стратегия"],
-              presentationUrl:
-                "https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FSA8myMBzPzwVq6L%2BMctxxKLr3ktgsBqRZcb4xMlkruM%2FI0bf2UiDmQdFSXJTyq90q%2FJ6bpmRyOJonT3VoXnDag%3D%3D%3A%2FМетелкин%20Д.А.%20О%20стратегическом%20управлении%20в%20системе%20образования%20.pdf&name=Метелкин%20Д.А.%20О%20стратегическом%20управлении%20в%20системе%20образования%20.pdf&nosw=1",
+              presentationUrl: "https://disk.yandex.ru/i/VSkjXoIaIo1gdg",
+              thesisUrl: "speakers/serikov.html",
+            },
+            {
+              image: "https://zuevpu.github.io/Thedirectorisontop2/img/bad.jpg",
+              name: "Андрей Бадин",
+              position:
+                "Основатель Product Lab",
+              topic: "Стратегии управления",
+              tags: ["Цели", "Управление"],
+              thesisUrl: "speakers/badin.html",
             },
           ];
 
@@ -422,6 +468,11 @@
               card.querySelector('[itemprop="description"]').textContent =
                 speaker.topic;
 
+              // Тезисы выступления
+              const thesisBtn = clone.querySelector(".hover\\:bg-green-50");
+              thesisBtn.dataset.url = speaker.thesisUrl;
+              thesisBtn.style.display = speaker.thesisUrl ? "block" : "none";
+
               // Конспект
               const notesBtn = clone.querySelector(".hover\\:bg-blue-50");
               notesBtn.dataset.url = speaker.notesUrl;
@@ -435,6 +486,17 @@
               presentationBtn.style.display = speaker.presentationUrl
                 ? "block"
                 : "none";
+
+              // Презентация 2
+              const presentationBtns = clone.querySelectorAll(
+                ".hover\\:bg-orange-50"
+              );
+              if (presentationBtns.length > 1 && speaker.presentationUrl2) {
+                presentationBtns[1].dataset.url = speaker.presentationUrl2;
+                presentationBtns[1].style.display = "block";
+              } else if (presentationBtns.length > 1) {
+                presentationBtns[1].style.display = "none";
+              }
 
               // Теги
               const tagContainer = card.querySelector(
@@ -459,9 +521,183 @@
             if (url) window.open(url, "_blank");
           }
 
+          function openThesisPage(url) {
+            if (url) window.location.href = url;
+          }
+
           // Инициализация при загрузке страницы
           document.addEventListener("DOMContentLoaded", renderSpeakers);
         </script>
+
+        <!-- Practices Section -->
+        <section id="practices" class="mb-16">
+          <div class="flex items-center mb-8">
+            <div class="h-1 bg-blue-500 flex-grow"></div>
+            <h2 class="text-3xl font-bold px-4 text-center">
+              Практики участников
+            </h2>
+            <div class="h-1 bg-blue-500 flex-grow"></div>
+          </div>
+          <p class="mb-8 text-lg">
+            Представляем практики участников образовательного события:
+          </p>
+
+          <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <!-- Practice Card Template -->
+            <template id="practice-template">
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden p-6 hover:shadow-lg transition duration-300"
+              >
+                <h3 class="text-xl font-bold mb-3 text-gray-800"></h3>
+                <p class="text-sm text-gray-600 mb-4"></p>
+                <div
+                  class="p-3 border rounded-lg hover:bg-blue-50 transition duration-200 cursor-pointer"
+                  onclick="openLink(this.dataset.url)"
+                >
+                  <div class="flex items-center">
+                    <i
+                      class="fas fa-file-powerpoint text-orange-500 text-2xl mr-3"
+                    ></i>
+                    <div>
+                      <h4 class="font-bold">Презентация</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <script>
+            const practices = [
+              {
+                name: "Богачева Ольга Сергеевна",
+                topic:
+                  "Мастер-класс «Олимпийский сплав или управление творческой командой»",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/1jqcRdAkwG_YWE6-NLqFePDm_pKaWYFP2/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Вахрушев Павел Алексеевич",
+                topic:
+                  "«Инженерный лифт» как способ профориентации и профессионального самоопределения в образовательной модели «Школа-ВУЗ-Предприятие»",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/19IoK9pG7EOL971FTkJd3516ruwM4GmmU/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Денисова Ольга Викторовна",
+                topic: "Формула успеха школы: путь к стабильному развитию",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/1sZzQx0R_jRap-AzPjB1-S1sRLmXYsgGC/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Живанович Оксана Викторовна",
+                topic:
+                  "Реальные инструменты формирования единого воспитательного пространства в ОО",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/14uh-yXbzwUKyXYBgEsp3bvqF_wLhs-ho/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Квашина Анна Александровна",
+                topic: "Не мероприятия ради галочки, а сюжет ради смысла",
+                presentationUrl:
+                  "https://drive.google.com/drive/folders/1DNeM5QlGYK80jMu_jmR44vdyK3FDe6r1?usp=drive_link",
+              },
+              {
+                name: "Ковалева Марина Юрьевна",
+                topic: "Коридорное образование и Проектная площадка пап (ППП)",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/1R49RIZVPzSwnX1Dzb9BQB2Q_CmvLXlwS/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Кугаевская Елена Дмитриевна",
+                topic:
+                  "«Использование ресурсов «Президентской библиотеки имени Б.Н. Ельцина» в образовательных организациях, имеющих статус «Опорная площадка проекта «Без срока давности» в субъекте Российской Федерации»",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/1uMTLxwgyRGf3rEEPg8gJQlqrCTiu4s-w/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Кумсков Виктор Викторович",
+                topic:
+                  "Механизмы вовлечения родителей в воспитательную систему школы",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/1Ygi8THPkTKpe38GUgZq2LZL69n1kOXp_/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Кумсков Виктор Викторович",
+                topic:
+                  "Интеграция основного и дополнительного образования в целях повышения качества образования",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/1ZqfMICveC3foO98PeC7XlgnWx-atuTEe/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Лиманская Светлана Викторовна",
+                topic:
+                  "«Единство непохожих… Командная работа – путь к успеху!»",
+                presentationUrl:
+                  "https://drive.google.com/drive/folders/10Cy8k3VV_B_RUmG6240fsBeOfD9iYmrp?usp=drive_link",
+              },
+              {
+                name: "Николаюк Елизавета Алексеевна",
+                topic:
+                  "Патриотизм в сердце школы: стратегия и практика руководителя",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/1odlIsSSobOymZ9EJJ7AnRX4MAZmW7cTg/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Рафальская Ирина Владимировна",
+                topic:
+                  "Школьный музей как проектный офис образовательной организации",
+                presentationUrl:
+                  "https://drive.google.com/drive/folders/1_8kDF2E06DymUAHynUAyOtGE6xApazkD?usp=drive_link",
+              },
+              {
+                name: "Сидоркин Владимир Юрьевич",
+                topic:
+                  "«Синергия круглосуточного лагеря «Ласточка» и учреждений дополнительного образования: создание единого образовательного пространства»",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/1A7w9Cq29Wgq7w1otlWP_GJll1sVCN4n0/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+              {
+                name: "Терновская Мария Владимировна",
+                topic:
+                  "Рисковый профиль школы: работа с детьми, имеющими миграционную историю",
+                presentationUrl:
+                  "https://drive.google.com/drive/folders/1PE8AM2vYOPwMDT2BBETIiVMWF5pWMyra?usp=drive_link",
+              },
+              {
+                name: "Усиевич Татьяна Аркадьевна",
+                topic:
+                  "Достижения как результат управленческой стратегии современного руководителя",
+                presentationUrl:
+                  "https://docs.google.com/presentation/d/1sG2OkednUOq5C_DwHzpkDXBrYoVwJ86h/edit?usp=drive_link&ouid=107529769354136301616&rtpof=true&sd=true",
+              },
+            ];
+
+            function renderPractices() {
+              const practiceContainer =
+                document.querySelector("#practices .grid");
+              const template =
+                document.getElementById("practice-template").content;
+
+              practices.forEach((practice) => {
+                const clone = template.cloneNode(true);
+                const card = clone.querySelector("div");
+
+                card.querySelector("h3").textContent = practice.name;
+                card.querySelector("p").textContent = practice.topic;
+
+                const presentationBtn = card.querySelector(
+                  ".hover\\:bg-blue-50"
+                );
+                presentationBtn.dataset.url = practice.presentationUrl;
+
+                practiceContainer.appendChild(clone);
+              });
+            }
+
+            document.addEventListener("DOMContentLoaded", renderPractices);
+          </script>
+        </section>
 
         <!-- Resources Section -->
         <section id="resources" class="mb-16">
